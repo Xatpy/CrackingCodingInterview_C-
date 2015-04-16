@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace CrackingCodingInterview
 {
-    class Program
+    class Chapter1
     {
+        /* Exercise 1.1:
+         * Implement an algorithm to determine if a string has all unique characters What if you 
+           can not use additional data structures?
+         */
         bool hasAllUniqueCharacters(string str)
         {
             char?[] aux = new char?[str.Length];
@@ -41,12 +45,38 @@ namespace CrackingCodingInterview
             return true;
         }
 
+        /**
+         * Exercise 1.2:
+         * Write code to reverse a C-Style String (C-String means that “abcd” is represented as 
+         * five characters, including the null character )
+         */
+        string reverse(string str)
+        {
+            string str_rever = "";
+            for (int i = str.Length - 1; i >= 0; --i)
+            {
+                str_rever += str[i];
+            }
+            return str_rever;
+        }
+
         static void Main(string[] args)
         {
-            Program pr = new Program();
-            string word = "jkaime";
-            bool b = pr.hasAllUniqueCharacters(word);
-            Console.WriteLine("hasAllUniqueCharacters:      " + b);
+            Chapter1 ch_1 = new Chapter1();
+            string word = "holaaaaaa";
+
+            int exercise = 2;
+
+            switch (exercise)
+            {
+                case 1:
+                    bool b = ch_1.hasAllUniqueCharacters(word);
+                    Console.WriteLine("hasAllUniqueCharacters:      " + b);
+                    break;
+                case 2:
+                    Console.WriteLine(ch_1.reverse(word));
+                    break;
+            }           
         }
     }
 }
