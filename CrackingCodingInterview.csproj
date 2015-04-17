@@ -63,6 +63,7 @@
     <Compile Include="Chapter1.cs" />
     <Compile Include="Chapter11.cs" />
     <Compile Include="Chapter2.cs" />
+    <Compile Include="Chapter3.cs" />
     <Compile Include="main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
