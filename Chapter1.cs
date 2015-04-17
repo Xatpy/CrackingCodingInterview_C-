@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace CrackingCodingInterview
 {
-    class Chapter1
+    /***
+     * CHAPTER 1 : Arrays and Strings
+     ***/
+    public class Chapter1
     {
         /* Exercise 1.1:
          * Implement an algorithm to determine if a string has all unique characters What if you 
            can not use additional data structures?
          */
-        bool hasAllUniqueCharacters(string str)
+        public bool hasAllUniqueCharacters(string str)
         {
             char?[] aux = new char?[str.Length];
 
@@ -50,7 +53,7 @@ namespace CrackingCodingInterview
          * Write code to reverse a C-Style String (C-String means that “abcd” is represented as 
          * five characters, including the null character )
          */
-        string reverse(string str)
+        public string reverse(string str)
         {
             string str_rever = "";
             for (int i = str.Length - 1; i >= 0; --i)
@@ -64,7 +67,7 @@ namespace CrackingCodingInterview
          * Exercise 1.4 :  
          * Write a method to decide if two strings are anagrams or not.
          */
-        bool areAnagrams(string str1, string str2)
+        public bool areAnagrams(string str1, string str2)
         {
             if (str1.Length != str2.Length)
                 return false;
@@ -86,7 +89,7 @@ namespace CrackingCodingInterview
          * Exercise 1.5 :
          * Write a method to replace all spaces in a string with ‘%20’
          */
-        string replaceSpaces(string str)
+        public string replaceSpaces(string str)
         {
             return str.Replace(" ", "%20");
         }
@@ -96,7 +99,7 @@ namespace CrackingCodingInterview
          * Given an image represented by an NxN matrix, where each pixel in the image is 4 
          * bytes, write a method to rotate the image by 90 degrees Can you do this in place?
          */
-        int?[,] rotateImage(int[,] origArray)
+        public int?[,] rotateImage(int[,] origArray)
         {
             //Check dimensions
             int dimension = origArray.GetLength(0);
@@ -125,7 +128,7 @@ namespace CrackingCodingInterview
          * Write an algorithm such that if an element in an MxN matrix is 0, its entire row and 
          * column is set to 0.
          */
-        void settingToZero(ref int[,] array)
+        public void settingToZero(ref int[,] array)
         {
             Console.WriteLine("Before:");
             Auxiliar.printArray(array);
@@ -171,55 +174,5 @@ namespace CrackingCodingInterview
                 j = par_j;
             }
         }   
-
-        /*
-         * --- MAIN ---
-         */
-        static void Main(string[] args)
-        {
-            Chapter1 ch_1 = new Chapter1();
-            string word = "holaaaaaa";
-
-            int exercise = 7;
-
-            switch (exercise)
-            {
-                case 1:
-                    bool b = ch_1.hasAllUniqueCharacters(word);
-                    Console.WriteLine("hasAllUniqueCharacters:      " + b);
-                    break;
-                case 2:
-                    Console.WriteLine(ch_1.reverse(word));
-                break;
-                case 3:
-                break;
-                case 4:
-                    string w1 = "abcd";
-                    string w2 = "dcba";
-                    Console.WriteLine("anagrams: " + ch_1.areAnagrams(w1, w2));
-                break;
-                case 5:
-                    string with_spaces = "fas ñasdf fff   asdf";
-                    Console.WriteLine(ch_1.replaceSpaces(with_spaces));
-                break;
-                case 6:
-                {
-                    int[,] arr = new int[,] { { 0, 1, 2, 3}, 
-                                                { 4, 5, 6, 7},
-                                                { 8, 9,10,11},
-                                                {12,13,14,15}  } ;                        
-                    int?[,] rotated = ch_1.rotateImage(arr);
-                 }
-                break;
-                case 7:
-                {
-                    int[,] arr = new int[,] {  { 66, 10, 2, 3, 25, 50}, 
-                                                { 4,  5, 6, 7,  0, 10},
-                                                { 8, 40,10,11,  3, 80} };
-                    ch_1.settingToZero(ref arr);
-                }
-                break;
-            }           
-        }
     }
 }
