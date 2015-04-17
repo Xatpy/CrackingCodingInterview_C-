@@ -37,5 +37,16 @@ namespace CrackingCodingInterview
             }
             Console.WriteLine("--------------");
         }
+
+        public static void printListNode(Node nd)
+        {
+            while (nd != null) 
+            { 
+                Console.Write(nd.Data + " --> ");
+                nd = nd.Next;
+            }
+            Console.Write(" :NULL ");
+            Console.WriteLine("");
+        }
     }
 }

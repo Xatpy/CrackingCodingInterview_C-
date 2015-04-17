@@ -59,19 +59,72 @@ namespace CrackingCodingInterview
             }
         }
 
+        static void chapt_2()
+        {
+            Chapter2 ch_2 = new Chapter2();
+
+            int exercise = 1;
+
+            switch (exercise) {
+                case 1:
+                {
+                    Node ndList = new Node(1);
+                    ndList.appendToTail(2);
+                    ndList.appendToTail(3);
+                    ndList.appendToTail(4);
+                    ndList.appendToTail(2);
+                    ndList.appendToTail(5);
+
+                    Auxiliar.printListNode(ndList);
+                    ch_2.RemoveDuplicates(ref ndList);
+                    Auxiliar.printListNode(ndList);
+
+
+                } break;
+            }
+        }
+
+        static void chapt_11(params object[] opt_exercise)
+        {
+            Chapter11 ch_11 = new Chapter11();
+
+            //Selecte exercise
+            int exercise = 1;
+            if (opt_exercise.Length > 0)
+            {
+                exercise = (int)opt_exercise[0];
+            }
+
+            switch (exercise)
+            {
+                case 1:
+                    ch_11.findMistake();
+                break;
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("::::::::::::::: Cracking the Coding Interview :::::::::::::::"); 
             Console.WriteLine();
-            int chapter = 1;
+
+            int chapter = 11;
 
             switch (chapter)
             {
                 case 1:
                     chapt_1();
                 break;
+                case 2:
+                    chapt_2();
+                break;
+
+                case 11:
+                    chapt_11();
+                break;
             }
 
+            Console.WriteLine();
             Console.WriteLine("Press ENTER to finish...");
             Console.ReadLine();
         }
