@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrackingCodingInterview
+namespace Training_CSharp
 {
     /***
      * CHAPTER 2 : Linked lists

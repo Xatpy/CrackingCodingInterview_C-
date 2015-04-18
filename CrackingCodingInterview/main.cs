@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrackingCodingInterview
+namespace Training_CSharp
 {
     class main
     {
@@ -105,7 +105,7 @@ namespace CrackingCodingInterview
 
         static void Main(string[] args)
         {
-            Console.WriteLine("::::::::::::::: Cracking the Coding Interview :::::::::::::::"); 
+            Console.WriteLine("::::::::::::::: Training C# :::::::::::::::"); 
             Console.WriteLine();
 
             int chapter = 11;

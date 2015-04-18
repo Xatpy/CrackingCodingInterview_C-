@@ -7,8 +7,8 @@
     <ProjectGuid>{EBB7EFE5-FD1F-4D52-B1AA-D492D0F7E7E8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CrackingCodingInterview</RootNamespace>
-    <AssemblyName>CrackingCodingInterview</AssemblyName>
+    <RootNamespace>Training_CSharp</RootNamespace>
+    <AssemblyName>Training_CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CrackingCodingInterview.main</StartupObject>
+    <StartupObject>Training_CSharp.main</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,12 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auxiliar.cs" />
-    <Compile Include="Chapter1.cs" />
-    <Compile Include="Chapter11.cs" />
-    <Compile Include="Chapter2.cs" />
-    <Compile Include="Chapter3.cs" />
-    <Compile Include="main.cs" />
+    <Compile Include="CrackingCodingInterview\Auxiliar.cs" />
+    <Compile Include="CrackingCodingInterview\Chapter1.cs" />
+    <Compile Include="CrackingCodingInterview\Chapter11.cs" />
+    <Compile Include="CrackingCodingInterview\Chapter2.cs" />
+    <Compile Include="CrackingCodingInterview\Chapter3.cs" />
+    <Compile Include="CrackingCodingInterview\main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
